@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unibo.wenvusage.TestMoveVirtualRobot" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-02-25T16:43:36" hostname="DESKTOP-87M94UH" time="6.678">
+  <properties/>
+  <testcase name="testMovesNoFailing" classname="it.unibo.wenvusage.TestMoveVirtualRobot" time="2.227"/>
+  <testcase name="testMoveForwardNoHit" classname="it.unibo.wenvusage.TestMoveVirtualRobot" time="1.223"/>
+  <testcase name="testMoveForwardHit" classname="it.unibo.wenvusage.TestMoveVirtualRobot" time="3.228"/>
+  <system-out><![CDATA[TestMoveVirtualRobot | setUp: robot should be at HOME-DOWN 
+TestMoveVirtualRobot | testWork 
+turnLeft sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":true,"move":"turnLeft"}
+MoveVirtualRobot | checkCollision_simple collision=false
+turnRight sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":true,"move":"turnRight"}
+MoveVirtualRobot | checkCollision_simple collision=false
+alarm sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":true,"move":"alarm"}
+MoveVirtualRobot | checkCollision_simple collision=false
+%%%  TestMoveVirtualRobot |  terminates 
+TestMoveVirtualRobot | setUp: robot should be at HOME-DOWN 
+TestMoveVirtualRobot | testMoveForward 
+moveForward sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":true,"move":"moveForward"}
+MoveVirtualRobot | checkCollision_simple collision=false
+moveBackward sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":true,"move":"moveBackward"}
+MoveVirtualRobot | checkCollision_simple collision=false
+%%%  TestMoveVirtualRobot |  terminates 
+TestMoveVirtualRobot | setUp: robot should be at HOME-DOWN 
+TestMoveVirtualRobot | testMoveForward 
+moveForward sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":false,"move":"moveForward"}
+MoveVirtualRobot | checkCollision_simple collision=true
+moveBackward sendCmd 
+MoveVirtualRobot | checkCollision_simple jsonStr= {"endmove":false,"move":"moveBackward"}
+MoveVirtualRobot | checkCollision_simple collision=true
+%%%  TestMoveVirtualRobot |  terminates 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
