@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0514619f-a4bf-4127-94e4-c14291985538" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/main/java/it/unibo/boundaryWalk/MoveVirtualRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/test/java/it/unibo/boundaryWalk/TestMoveVirtualRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/userDocs/Legenda.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/userDocs/VirtualRobot2021.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../da/Nuovo documento di testo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/main/java/it/unibo/boundaryWalk/MoveVirtualRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/main/java/it/unibo/boundaryWalk/MoveVirtualRobot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

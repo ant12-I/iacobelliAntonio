@@ -12,18 +12,19 @@ import org.json.JSONObject;
 import java.net.URI;
 
 public class MoveVirtualRobot {
-    private  final String localHostName    = "localhost";
-    private  final int port                = 8090;
-    private  final String URL              = "http://"+localHostName+":"+port+"/api/move";
+    private final String localHostName = "localhost";
+    private final int port = 8090;
+    private final String URL = "http://" + localHostName + ":" + port + "/api/move";
 
-    public MoveVirtualRobot() { }
+    public MoveVirtualRobot() {
+    }
 
-    protected boolean sendCmd(String move, int time)  {
+    protected boolean sendCmd(String move, int time) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            System.out.println( move + " sendCmd "  );
+            System.out.println(move + " sendCmd ");
             //String json         = "{\"robotmove\":\"" + move + "\"}";
-            String json         = "{\"robotmove\":\"" + move + "\" , \"time\": " + time + "}";
+            String json = "{\"robotmove\":\"" + move + "\" , \"time\": " + time + "}";
             StringEntity entity = new StringEntity(json);
             HttpUriRequest httppost = RequestBuilder.post()
                     .setUri(new URI(URL))
@@ -35,45 +36,65 @@ public class MoveVirtualRobot {
             //System.out.println( "MoveVirtualRobot | sendCmd response= " + response );
             boolean collision = checkCollision(response);
             return collision;
-        } catch(Exception e){
+        } catch (Exception e) {
             System.out.println("ERROR:" + e.getMessage());
             return true;
         }
     }
 
     protected boolean checkCollision(CloseableHttpResponse response) throws Exception {
-        try{
+        try {
             //response.getEntity().getContent() is an InputStream
-            String jsonStr = EntityUtils.toString( response.getEntity() );
-            System.out.println( "MoveVirtualRobot | checkCollision_simple jsonStr= " +  jsonStr );
+            String jsonStr = EntityUtils.toString(response.getEntity());
+            System.out.println("MoveVirtualRobot | checkCollision_simple jsonStr= " + jsonStr);
             //jsonStr = {"endmove":true,"move":"moveForward"}
-            JSONObject jsonObj = new JSONObject(jsonStr) ;
+            JSONObject jsonObj = new JSONObject(jsonStr);
             boolean collision = false;
-            if( jsonObj.get("endmove") != null ) {
-                collision = ! jsonObj.get("endmove").toString().equals("true");
+            if (jsonObj.get("endmove") != null) {
+                collision = !jsonObj.get("endmove").toString().equals("true");
                 System.out.println("MoveVirtualRobot | checkCollision_simple collision=" + collision);
             }
             return collision;
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("MoveVirtualRobot | checkCollision_simple ERROR:" + e.getMessage());
-            throw(e);
+            throw (e);
         }
     }
 
-    public boolean moveForward(int duration)  { return sendCmd("moveForward", duration);  }
-    public boolean moveBackward(int duration) { return sendCmd("moveBackward", duration); }
-    public boolean moveLeft(int duration)     { return sendCmd("turnLeft", duration);     }
-    public boolean moveRight(int duration)    { return sendCmd("turnRight", duration);    }
-    public boolean moveStop(int duration)     { return sendCmd("alarm", duration);        }
+    public boolean moveForward(int duration) {
+        return sendCmd("moveForward", duration);
+    }
+
+    public boolean moveBackward(int duration) {
+        return sendCmd("moveBackward", duration);
+    }
+
+    public boolean moveLeft(int duration) {
+        return sendCmd("turnLeft", duration);
+    }
+
+    public boolean moveRight(int duration) {
+        return sendCmd("turnRight", duration);
+    }
+
+    public boolean moveStop(int duration) {
+        return sendCmd("alarm", duration);
+    }
+
     /*
     MAIN
      */
-    public static void main(String[] args)   {
+    public static void main(String[] args) {
         MoveVirtualRobot appl = new MoveVirtualRobot();
-        boolean moveFailed = appl.moveLeft(300);
-        System.out.println( "MoveVirtualRobot | moveLeft  failed= " + moveFailed);
-        moveFailed = appl.moveRight(1300);
-        System.out.println( "MoveVirtualRobot | moveRight failed= " + moveFailed);
+        //boolean moveFailed = appl.moveLeft(300);
+        boolean moveFailed;
+        for (int i = 0; i < 4; i++) {
+            do {
+                moveFailed = appl.moveForward(600);
+                System.out.println("MoveVirtualRobot | moveLeft  failed= " + moveFailed);
+            } while (moveFailed == false);
+            moveFailed = appl.moveLeft(1000);
+        }
     }
 }
 
