@@ -94,6 +94,7 @@ public class MoveVirtualRobot {
                 System.out.println("MoveVirtualRobot | moveLeft  failed= " + moveFailed);
             } while (moveFailed == false);
             moveFailed = appl.moveLeft(1000);
+            System.out.println("MoveVirtualRobot | moveLeft  failed= " + moveFailed);
         }
     }
 }
