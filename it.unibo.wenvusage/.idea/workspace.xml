@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0514619f-a4bf-4127-94e4-c14291985538" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/it/unibo/wenvusage/MoveVirtualRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/it/unibo/wenvusage/TestMoveVirtualRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/main/java/it/unibo/boundaryWalk/MoveVirtualRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/app/src/test/java/it/unibo/boundaryWalk/TestMoveVirtualRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/userDocs/Legenda.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it.unibo.boundaryWalk/userDocs/VirtualRobot2021.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../da/Nuovo documento di testo.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1oygTuOcV12ASuimYvdt8T2L1V8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,7 +52,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Gradle.TestMoveVirtualRobot">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -144,5 +153,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
