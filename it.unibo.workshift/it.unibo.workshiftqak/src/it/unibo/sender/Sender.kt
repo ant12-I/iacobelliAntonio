@@ -19,17 +19,17 @@ class Sender ( name: String, scope: CoroutineScope  ) : ActorBasicFsm( name, sco
 		return { //this:ActionBasciFsm
 				state("s0") { //this:State
 					action { //it:State
-						forward("m1", "m1(1)" ,"worker" ) 
+						forward("m1", "m1(1)" ,"workshift" ) 
 						delay(200) 
-						forward("m1", "m1(2)" ,"worker" ) 
+						forward("m1", "m1(2)" ,"workshift" ) 
 						delay(200) 
-						forward("m1", "m1(3)" ,"worker" ) 
+						forward("m1", "m1(3)" ,"workshift" ) 
 						delay(200) 
-						forward("m2", "m2(1)" ,"worker" ) 
+						forward("m2", "m2(1)" ,"workshift" ) 
 						delay(200) 
-						forward("m2", "m2(2)" ,"worker" ) 
+						forward("m2", "m2(2)" ,"workshift" ) 
 						delay(200) 
-						forward("m1", "m1(4)" ,"worker" ) 
+						forward("m1", "m1(4)" ,"workshift" ) 
 						delay(200) 
 					}
 				}	 
