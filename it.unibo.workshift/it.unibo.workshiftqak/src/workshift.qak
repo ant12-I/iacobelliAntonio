@@ -1,0 +1,57 @@
+System workshift
+
+Dispatch m1 : m1(ARG)
+Dispatch m2 : m2(ARG) 
+  
+Context ctxworkshift ip [host="localhost" port=8092]
+  
+QActor worker context ctxworkshift{
+
+[# var WorkshiftTime = 4000L  #]  
+	State s0 initial { 	 
+		discardMsg Off
+ 	}   
+ 	Goto handleMessagesm1
+ 				   
+ 	State handleMessagesm1{  
+ 		printCurrentMessage
+ 		println("Working in the morning.")
+ 		 
+ 	}      
+
+ 	Transition t0 whenTimeVar WorkshiftTime -> handleMessagesm2
+ 				  whenMsg m1 -> handleMessagesm1
+
+	 State handleMessagesm2{
+	 	printCurrentMessage
+	 	println("Working in the afternoon.")
+ 		 
+	 } 
+	 Transition t0 whenTimeVar WorkshiftTime -> sleeping
+ 				  whenMsg m2 -> handleMessagesm2
+	 State sleeping{
+ 		println("Sleeping...")
+  
+ 	}
+ 	Transition t0 whenTimeVar WorkshiftTime -> handleMessagesm1
+ }
+
+	
+QActor sender context ctxworkshift{
+	State s0 initial { 	
+ 		 forward worker -m m1 : m1(1)
+		 delay 200
+		 forward worker -m m1 : m1(2)
+		 delay 200
+		 forward worker -m m1 : m1(3)  
+		 delay 200
+		 forward worker -m m2 : m2(1)		  
+		 delay 200
+		 forward worker -m m2 : m2(2)		  
+		 delay 200
+		 forward worker -m m1 : m1(4)		  
+		 delay 200
+
+	} 
+	
+}
